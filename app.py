@@ -13,6 +13,7 @@ def soma (num1, num2):
     except ValueError:
         return "Apenas numeros inteiros"
 
+
 @app.route('/sub/<num1>-<num2>')
 def subtracao (num1, num2):
     try:
@@ -39,6 +40,8 @@ def divisao (num1, num2):
         return str(num1 / num2)
     except ValueError:
         return "Apenas numeros inteiros"
+    except ZeroDivisionError:
+        return "Não é divisivel por zero"
 
 @app.route('/verficar/<num1>')
 def verficar (num1):

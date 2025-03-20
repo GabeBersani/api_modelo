@@ -40,7 +40,7 @@ def divisao (num1, num2):
     except ValueError:
         return "Apenas numeros inteiros"
 
-@app.route('/verficar/<int:num1>')
+@app.route('/verficar/<num1>')
 def verficar (num1):
     try:
         num1 = int(num1)
